@@ -1,0 +1,111 @@
+body{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ul{
+    text-decoration: none;
+}
+ul li{
+    display: inline-block;
+    float: right;
+}
+ul li a{
+    text-decoration: none;
+    background-color: blue;
+    text-align: right;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+}ul li a:hover{
+    background-color: yellow;
+    color: black;
+}
+a.active{
+    background-color: red;
+    color: white;
+}
+#nav{
+    height: 80px;
+    width: 104%;
+    background-color: skyblue;
+    border-radius: 20px;
+}
+#nav #boy{
+    height: 40px;
+    width: 20%;
+    float: left;
+    border-radius: 20px;
+}
+#nav #girl{
+    height: 40px;
+    width: 80%;
+    float: right;
+    padding-top: -20px;
+}
+#section1{
+    height: 500px;
+    width: 100%;
+    background-color: skyblue;
+    margin-top: 10px;
+    padding: 20px;
+}
+#section1 #a{
+    height: 400px;
+    width: 10px;
+    float: left;
+}
+#section1 #b{
+    height: 500px;
+    width: 90px;
+    float: right;
+    text-decoration: none;
+}
+#section2{
+    height: 500px;
+    width: 100%;
+    background-color: rgb(63, 104, 121);
+    margin-top: 5px;
+    padding: 5px;
+}
+#section2 #a{
+    height: 500px;
+    width: 50%;
+    float: right;
+}
+#section2 #b{
+    height: 500px;
+    width: 50%;
+    float: left;
+    text-decoration: none;
+    text-align: left;
+}
+#footer{
+    background-color: rgb(63, 104, 121);
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+}
+.jss2{
+    width: 100%;
+    height: 400px;
+}
+*center-placeholder{
+    padding: 10px;
+    font-size: 16px;
+    width: 90%;
+    border-radius: 10px;
+    height: 50px;
+}
+#bottom{
+    color: black;
+    text-decoration: none;
+}
+
+
+

@@ -1,0 +1,196 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 id="result">answer</h1>
+
+  <script type="text/javaScript">
+
+  //for loop
+//   const fruits = ["apple","banana","mango","orange","grape"]
+//   let output = "";
+
+//   for (let i=0; i < fruits.length; i++){
+//      output = output + fruits[i] + "<br>"
+//   }
+//   document.getElementById("result").innerHTML = output;
+//   console.log(output)
+
+
+//break
+//   for(i=1; i<=10; i++)
+//   { if(i===4){
+//      break;
+//   }
+//      output = output + i + '<br>';
+     
+//   }
+//  document.getElementById('result').innerHTML = output;
+
+ //continue
+//  for(i=1; i<=10; i++)
+//   { if(i===2 || i===3){
+//      continue;
+//   }
+//      output = output + i + '<br>';
+     
+//   }
+//  document.getElementById('result').innerHTML = output;
+
+ 
+ //while loop
+//  var i = 1;
+//  while (1 <= 5)
+//  {
+//     document.write(i);
+//     i++;
+//  }
+
+ //do while
+// var output = "";
+// let a = 1;
+
+// do{
+//    output += a + "<br>"
+//    a++;
+// } while (1 <=5);
+// document.getElementById('result').innerHTML = output;
+
+//switch cases
+
+// var day = 4;
+// var output = "";
+
+// switch (day){
+//    case 1:
+//    output = "Monday"
+//    break;
+
+//    case 2:
+//    output = "Tuesday"
+//    break;
+
+//    case 3:
+//    output = "Wednesday"
+//    break;
+
+//    default:
+//    output = "Other day"
+//    }
+//    document.getElementById("result").innerHTML = output;
+//    console.log(output)
+
+   // let userprompt = parseInt(
+   //    prompt("enter the day of the week(numerical)")
+   // )
+    
+   // var output = "";
+
+   // switch (true){
+   // case userprompt === 1:
+   // output = "Monday"
+   // break;
+
+   // case userprompt === 2:
+   // output = "Tuesday"
+   // break;
+
+   // case userprompt === 3:
+   // output = "Wednesday"
+   // break;
+
+   // case userprompt === 4:
+   // output = "Thursday"
+   // break;
+
+   // case userprompt === 5:
+   // output = "Friday"
+   // break;
+
+   // case userprompt === 6 || userprompt === 7:
+   // output = "Weekend"
+   // break;
+   
+   // default:
+   // output = "unknown day"
+   // }
+   // document.getElementById("result").innerHTML = output;
+   // console.log(output)
+
+
+// Prompt the user to enter a numerical grade
+// let grade = parseInt(
+//    prompt("Enter your numerical grade(between 0 and 100):")
+// )
+
+//initialize a variable to store letter grade
+let letterGrade = "";
+
+//use a switch case to determine the letter grade
+//    switch(true){
+//       case grade >= 90 && grade <=100:
+//          letterGrade = "A";
+//          break;
+//       case grade >= 80 && grade <=90:
+//           letterGrade = "B";
+//           break;
+//       case grade >= 70 && grade <=80:
+//           letterGrade = "C";
+//           break;
+//       case grade >= 60 && grade <=70:
+//           letterGrade = "D";
+//           break;
+//          case grade >= 50 && grade <=60:
+//           letterGrade = "E";
+//           break;
+//       case grade >= 0 && grade <=50:
+//           letterGrade = "F";
+//           break;
+//       default:
+//           letterGrade = "invalid grade";
+//    }
+//  let output = "your numerical grade: " + grade + '<br>';
+//  output += "your letter grade: " + letterGrade;
+//  document.getElementById("result").innerHTML = output;
+
+//take home assignmnet
+
+let userprompt = parseInt(prompt( 'Select 1 for circle, 2 for Square, 3 for Triangle, 4 to Exit')
+)
+
+
+switch (true){
+   case userprompt === 1:
+     shape = 'Circle'
+     break;
+
+   case userprompt === 2:
+     shape = 'Square'
+     break;
+     
+   case userprompt === 3:
+     shape = 'Triangle'
+     break;
+
+   case userprompt === 4:
+     shape = 'exiting the program...'
+     break;
+
+   default:
+      shape = 'try again'
+}
+  
+console.log(shape)
+document.getElementById("result").innerHTML = shape;
+
+  </script>
+
+
+
+
+ </body>
+ </html>

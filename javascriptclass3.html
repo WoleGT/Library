@@ -1,0 +1,183 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+
+ <style>
+    .button-green {
+        margin-top: 0.5rem;
+        padding: 10px 10px 10px 10px;
+        background: green;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        transition: all linear 0.5s;
+        cursor: pointer;
+    }
+
+    .button-green:hover {
+        transform:translate(5px, -5px);
+    }
+    .button-blue {
+        margin-top: 0.5rem;
+        padding: 10px 10px 10px 10px;
+        background: blue;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        transition: all linear 0.5s;
+        cursor: pointer;
+    }
+    .button-blue:hover {
+        transform:translate(5px, -5px);
+    }
+</style>
+ <body>
+
+ <h1 style="color: crimson">Login Here</h1>
+ <form>
+    <p>
+        <lable>Username</lable>
+        <input type="text" name="user_name" id="user_name">
+    </p>
+    <p>
+        <lable>Password</lable>
+        <input type="password" name="password" id="password">
+        <button type="button" onclick="togglePassword()" id="btns">Show Password</button>
+    </p>
+ </form>
+
+    <div id="settings">
+        <div>
+           <button class="button-blue" onclick="changeSetting1()">Settings One</button>
+           <button class="button-green" onclick="changeSetting2()">Settings Two</button>
+        </div>
+        
+       <h1>Online Publication</h1>
+       <p>
+        A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or natural resources
+       </p>
+       
+       <h2>Another Heading</h2> 
+       <p>
+        A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or natural resources
+       </p>
+    </div>
+
+
+    <!-- solving it parameter function way -->
+    <div id="settings">
+        <div>
+           <button class="button-blue" onclick="changeSetting('blue')">Settings One</button>
+           <button class="button-green" onclick="changeSetting('green')">Settings Two</button>
+        </div>
+        
+       <h1>Online Publication</h1>
+       <p>
+        A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or natural resources
+       </p>
+       
+       <h2>Another Heading</h2> 
+       <p>
+        A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or natural resources
+       </p>
+    </div>
+
+    <br>
+    <br>
+    <!-- <button type="button" onclick="multiplyNumber()">Function</button>
+    <button type="button" onclick="multiplyNumbers()">Parameter Function</button>
+    <div id="functionLearning"> -->
+
+        <form>
+            <input type="number" name="a" id="a">
+            <input type="number" name="b" id="b">
+            <button type="button" onclick="submitform()">Multiply</button> 
+        </form>
+ <body>
+   
+<script type="text/javascript">
+
+// toggle password codes
+function togglePassword()
+{ 
+   var passwordField = document.getElementById('password')
+
+   if(passwordField.type === 'password')
+   {
+    passwordField.type = 'text';
+    document.getElementById('btns').innerHTML = 'Hide Password'
+   }else{
+    passwordField.type = 'password';
+    document.getElementById('btns').innerHTML = 'Show Password'
+   }
+}
+
+// background change codes
+function changeSetting1()
+{
+    document.getElementById('settings').style="color:white; background-color:blue";  
+}
+function changeSetting2()
+{
+    document.getElementById('settings').style="color:white; background-color:green";  
+}
+
+
+// parameter function way background change codes
+function changeSetting(color)
+{
+    document.body.style.backgroundColor = color;  
+    document.body.style.color = 'white'; 
+}
+
+
+// parameter function codes
+function submitform()
+{
+    var number1 = document.getElementById('a').value
+    var number2 = document.getElementById('b').value
+    var answer = multiplyNumbers(number1,number2);
+    alert(answer);
+}
+function multiplyNumbers(a,b)
+{
+    var numberA = a;
+    var numberB = b;
+
+    var total = numberA * numberB;
+    return total;
+}
+
+//onload
+function acceptNumber(x,y)
+{
+    var number1 = x;
+    var number2 = y;
+
+    var c = number1 * number2;
+    var d = c + 50;
+    alert(d);
+}
+
+acceptNumber(10,7);
+
+// Define a function that takes two parameters
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+// Call the function with arguments and store the result
+var result = addNumbers(15, 3);
+
+// Print the result
+console.log("The sum is: " + result); // Output: The sum is: 8
+
+  
+    </script>
+
+ </body>
+ </html>

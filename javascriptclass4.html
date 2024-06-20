@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <style>
+    .add, minus, divide{
+        color: white;
+    }
+    .add{
+        background-color: skyblue;
+    }
+    .minus{
+        background-color: orange;
+    }
+    .divide{
+        background-color: blue;
+    }
+ </style>
+ <body>
+<!-- Topics Functions:with no parameter, variable scope,with parameter,return a value, function calling function     -->
+
+ <!-- <button onclick="">Greet Everybody</button> -->
+ <!-- onload greet(); -->
+
+ <h1>Javascript Calculator</h1>
+ <form>
+    <label>Number 1</label>
+    <input type="number" id="number1" name="number1">
+    <br>
+    <label>Number 2</label>
+    <input type="number" id="number2" name="number2">
+ </form> 
+ <button class="add" onclick="add()">Add</button>
+ <button class="minus" onclick="minus()">Subtract</button>
+ <button class="divide" onclick="divide()">%</button>
+  
+ <br>
+ <br>
+
+ <button type="button" id="btns" class="divide" onclick="countLikes()">0 Like</button>
+  
+    <script type="text/javascript">
+
+     
+    // calling a function using prompt
+    //    function greet(){
+    //     alert('Good evening All');
+    //    }
+    //     greet(); 
+
+
+
+    // Calculator excercise using ParseInt
+    // function add(){
+    //     var Number1 = document.getElementById('number1').value;
+    //     var Number2 = document.getElementById('number2').value;
+    //     var total = parseInt(Number1) + parseInt(Number2);
+    //     alert(total);
+    // }
+    // function minus()
+    // {
+    //     var Number1 = document.getElementById('number1').value;
+    //     var Number2 = document.getElementById('number2').value;
+    //     var total = parseInt(Number1) + parseInt(Number2);
+    //     alert(total);
+    // }
+    // function divide()
+    // {
+    //     var Number1 = document.getElementById('number1').value;
+    //     var Number2 = document.getElementById('number2').value;
+    //     var total = parseInt(Number1) + parseInt(Number2);
+    //     alert(total);
+    // }
+
+
+
+    // classwork - Facebook Like button
+    var number=0;
+
+    function countLikes()
+    {
+      number++
+      if (number <= 1){
+        document.getElementById('btns').innerHTML = number + ' Like';
+      }else{
+        document.getElementById('btns').innerHTML = number + ' Likes';
+      }
+    }
+
+
+
+    // parameter function way for Calculator
+    function add(){
+        var Number1 = document.getElementById('number1').value;
+        var Number2 = document.getElementById('number2').value;
+        var answer = calculateNumbers(Number1,Number2,'+');
+        document.write(answer);
+    }
+    function minus()
+    {
+        var Number1 = document.getElementById('number1').value;
+        var Number2 = document.getElementById('number2').value;
+        var answer = calculateNumbers(Number1,Number2,'-');
+        alert(answer);
+    }
+    function divide()
+    {
+        var Number1 = document.getElementById('number1').value;
+        var Number2 = document.getElementById('number2').value;
+        var answer = calculateNumbers(Number1,Number2,'/');
+        alert(answer);
+    }
+
+    function calculateNumbers(Number1,Number2,operator)
+    {
+        var a = parseInt(Number1);
+        var b = parseInt(Number2);
+        var c = operator;
+
+        if (c == '+')
+        {
+            return a+b;
+        }else if(c == '-')
+        {
+            return a-b;
+        }else{
+            return a/b;
+        }
+    }
+
+    // classwork Ecommerce
+    var gender = prompt('What is your gender?');
+    if (gender == 'Male' || gender == 'male' || gender == 'Man' || gender == 'Boy' )
+    {
+       alert('Phones are available for sale');
+    }else if(gender == 'Female')
+    {
+        alert ('Shoes and Bags are available');
+    }else{
+        alert('we dont have anything for you');
+    }
+
+
+
+
+
+    </script>
+ </body>
+ </html>

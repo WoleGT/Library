@@ -1,0 +1,16 @@
+body.h1{
+    background-color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none; to remove underline
+    text-transform:uppercase;
+    font-size: 32px or 1em
+    font-style: oblique;
+    color: rgb(red, green, blue);  
+    /* rbg(255 0 0); rbg(255 0 0 0.5)last is opacity */
+}
+
+/* external css notes */
+/* create a css page, style it give it as a link from an html page, here is the syntax */
+<link href="" rel="stylesheet" type=text/css>
+
+<h1>Wole is a Web Developer</h1>

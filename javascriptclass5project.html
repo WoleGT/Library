@@ -1,0 +1,227 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ </head>
+<style>
+   div{
+      min-height: 50px;
+      border: 1px gainsboro solid;
+   }
+</style>
+ <body class="container">
+   <h1>APEX STORE</h1>
+
+   <p>This store is currently running a promo for online shoppers. There will be a Christmas prize draw <strong>for customers who purchase goods worth up to N20,000 or up to 10 items 
+   in one transaction</strong>. The interface below has been designed for customers to enter the prize draw.</p>
+   <p>Using javaScript, based on the contents of the  shopping cart determine if the user is qualified for the draw or</p>
+
+   <h2>Your Shopping Bag......</h2>
+
+   
+   <div class="container">
+      <form>
+         <!-- item heading starts here -->
+         <div class="row">
+             <div class="col-md-3" style="font-weight: bolder;">Items</div>
+             <div class="col-md-3" style="font-weight: bolder;">Quantity</div>
+             <div class="col-md-3" style="font-weight: bolder;">Price</div>
+             <div class="col-md-3" style="font-weight: bolder;">Check</div>
+        </div>
+
+        <!-- item1 div starts here -->
+        <div class="row">
+            <div class="col-md-3">
+                <img src="./image/image2/blackshirt.webp" height="100px">
+            </div>
+            <div class="col-md-3">
+             <input type="number" value="0"  id="quantity" onchange="getValue()" style="width: 240px;">
+           </div>
+           <div class="col-md-3">
+            <input type="text" name="price" value="5500" id="price" style="width: 240px;">
+           </div>
+           <div class="col-md-3">
+            <p id="total1">Value</p>
+           </div>
+      </div>
+
+      <!-- item2 div starts here -->
+      <div class="row">
+         <div class="col-md-3">
+            <img src="./image/blueshirts.jpg" height="100px">
+         </div>
+         <div class="col-md-3">
+           <input type="number"  value="0" id="quantity2" onchange="getValue2()" style="width: 240px;">
+         </div>
+         <div class="col-md-3">
+            <input type="text" name="price" value="4000" id="price2" style="width: 240px;">
+         </div>
+         <div class="col-md-3">
+            <p id="total2">Value</p>
+         </div>
+      </div>
+
+      <!-- item3 div starts here -->
+      <div class="row">
+         <div class="col-md-3">
+            <img src="./image/image2/blackshirtss.jpg" height="100px">
+         </div>
+         <div class="col-md-3">
+            <input type="number"  value="0" id="quantity3" onchange="getValue3()" style="width: 240px;">
+         </div>
+         <div class="col-md-3">
+            <input type="text" name="price" value="1000" id="price3" style="width: 240px;">
+         </div>
+         <div class="col-md-3">
+            <p id="total3">Value</p>
+         </div>
+      </div>
+      </form>
+   </div>
+   
+  <!-- button starts here -->
+  <button type="button" onclick="getTotal()" style="background-color: red; color: aqua; width: 1120px;">Enter Prize Draw</button>
+
+  <p id="promoResult"></p>
+
+
+<!-- javaScript starts here -->
+
+<script type="text/javaScript">
+//Three (3) Value functions code
+   function getValue()
+   {
+    var quantity = document.getElementById('quantity').value;
+    var price = document.getElementById('price').value;
+   
+    var value1 = quantity * price
+
+    document.getElementById('total1').innerHTML = value1;
+   }
+
+
+   function getValue2()
+   {
+    var quantity = document.getElementById('quantity2').value;
+    var price = document.getElementById('price2').value;
+   
+    var value2 = quantity * price
+
+    document.getElementById('total2').innerHTML = value2;
+   }
+
+
+   function getValue3()
+   {
+    var quantity = document.getElementById('quantity3').value;
+    var price = document.getElementById('price3').value;
+   
+    var value3 = quantity * price
+
+    document.getElementById('total3').innerHTML = value3;  
+   }
+
+  
+  
+  
+  
+   function getTotal()
+{
+    var d = priceTotal();
+    var e = quantityTotal();
+    alert(d);
+    alert (e);
+    if (d >= 20000 || e >= 10){
+        document.getElementById('promoResult').innerHTML= 'Congrats you are qualified for our Valentine Day Promo. you are purchasing 5 items. the total amount being spent is 20000 naira an average of 4000 naira'; 
+        document.getElementById('promoResult').style.backgroundColor='green';
+        document.getElementById('promoResult').style.color='white';
+        
+    }else if (d < 20000 && e < 10)
+    {
+        document.getElementById('promoResult').innerHTML= 'Shop more'; 
+        document.getElementById('promoResult').style.backgroundColor='red';
+        document.getElementById('promoResult').style.color='white';
+    }else{
+        document.getElementById('promoResult').innerHTML= 'Invalid entry';
+        document.getElementById('promoResult').style.backgroundColor='red';
+        document.getElementById('promoResult').style.color='white';
+    }    
+}
+ 
+
+    function priceTotal()
+    {
+    var a = parseInt( document.getElementById('total1').value);
+    var b = parseInt( document.getElementById('total2').value);
+    var c = parseInt( document.getElementById('total3').value);
+    
+    var d = a + b + c;
+    return d  
+   }
+
+   function quantityTotal()
+    {
+    var x = parseInt( document.getElementById('quantity').value);
+    var y = parseInt( document.getElementById('quantity2').value);
+    var z = parseInt( document.getElementById('quantity3').value);
+    
+    var e = x + y + z;
+    return e  
+   }
+
+
+
+   //total caculation + no items calculation and Promo result codes
+
+//    function getTotal()
+// {
+//     var d = priceTotal();
+//     var e = quantityTotal();
+//     alert(d);
+//     alert(e);
+
+//     if (d >= 20000 || e > 10){
+//      document.getElementById('promoResult').innerHTML= 'Congrats';  
+//     }else if (d < 20000 && e < 10)
+//     {
+//      document.getElementById('promoResult').innerHTML= 'Shop more';   
+//     }else{
+//       document.getElementById('promoResult').innerHTML= 'Invalid Entry'; 
+//     }
+// }
+ 
+//     function priceTotal()
+//     {
+//     var a = parseInt(document.getElementById('total').value);
+//     var b = parseInt(document.getElementById('total2').value);
+//     var c = parseInt(document.getElementById('total3').value);
+    
+//     var d = a + b + c;
+//     return d  
+//    }
+
+//    function quantityTotal()
+//     {
+//     var x = parseInt(document.getElementById('quantity').value);
+//     var y = parseInt(document.getElementById('quantity2').value);
+//     var z = parseInt(document.getElementById('quantity3').value);
+    
+//     var e = x + y + z;
+//     return e 
+//    }
+  
+   
+   
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+</body>
+ </html>

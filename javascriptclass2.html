@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+
+     <!-- events in javascript-do this before something happens -->
+     <!-- how to select an element for action -->
+     <!-- how to use conditional statement -->
+     <!-- events - onclick, onchange, onmouseover, onmouseout, onkeydown, onload... -->
+     <!-- if you are retrieving from form use .value, if you are retrieving from HTML use .innerHTML -->
+     <!-- you can also add css styling by using .style='color:red;background-color:blue'; -->
+    <!-- <button onclick="getNumber()"style="cursor:pointer;">START QUIZ</button> -->
+
+
+     <!-- <form>
+      <p>
+       <label>Center</label>
+         <select id="Center">
+             <option value="">Select Center</option>
+             <option value="Lagos">Lagos</option>
+             <option value="Ogun">Ogun</option>
+             <option id="Oyo">Oyo</option>
+         </select>
+      </p>
+      <p>
+        <lable>Score</lable>
+        <input type="text" id="Score" name="Score" placeholder="enter your score">
+      </p>
+      <button type="button" onclick="jambScore()">Check result</button>
+     </form> -->
+    
+    <h1 id="head">Hello World</h1>
+    <p id="result"></p>
+    <form>
+      <p>
+        <lable>firstname</lable>
+        <input type="text" name="firstname" id="firstname">
+      </p>
+      <p>
+        <lable>lastname</lable>
+        <input type="text" name="lastname" id="lastname">
+      </p>
+      <p>
+        <lable>email</lable>
+        <input type="text" name="email" id="email">
+      </p>
+      <p>
+        <lable>password</lable>
+        <input type="password" name="password" id="password">
+      </p>
+      <p>
+        <lable>confirm password</lable>
+        <input type="password" name="confirm_password" id="confirm_password">
+      </p>
+      <p>
+        <label>Select your state</label>
+        <select id="state">
+          <option value="Abiodun">Ogun</option>
+          <option value="Sanwoolu">Lagos</option>
+        </select>
+      </p>
+      <button type="button" onload="getFormDetails()">Submit</button>
+    </form>
+
+    <script type="text/javascript">
+
+
+      // function getNumber()
+      // {
+      //   var number = prompt('Enter any number');
+      //   alert(number + ' ' + 'is available');
+      // }
+
+    
+        // var text = document.getElementById('head').innerHTML
+        // alert(text)
+        // var b  = document.getElementById('head').innerHTML='Good evening students';
+          // alert(b);
+          
+        // var b  = document.getElementById('head').style='color:red'; 
+        //   document.write(b);
+        
+
+        // function jambScore(){
+        //   var Center = document.getElementById('Center').value;
+        //   var Score = document.getElementById('Score').value;
+
+        //   alert(Center + Score)
+
+        //   if(Center == ""|| Score == "")
+        //   {
+        //     alert('kindly complete the fields');
+        //   }else if(Center != "" && Score < 200)
+        //   {
+        //     alert('fail');
+        //   }else if(Center != "" && Score >= 200)
+        //   {
+        //     alert('pass');
+        //   }
+
+        // }
+        
+        function getFormDetails()
+        {
+          var firstname = document.getElementById('firstname').value;
+          var lastname = document.getElementById('lastname').value;
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+          var confirmPassword = document.getElementById('confirm_password').value;
+          var state = document.getElementById('state').value;
+
+          alert(state);          
+        
+        //   //  conditions - we can write conditions for this our forms (or ||)(equals ==) (empty "")(notequalsto !=)
+        
+        //    if(firstname == "" || lastname == "" || email == ""|| password == "" || confirmPassword == "") 
+        //   {
+        //     document.getElementById('result').innerHTML='Please complete the fields';
+        //     document.getElementById('result').style.color="red";
+        //   }else if(password != confirmPassword) 
+        //   {
+        //     document.getElementById('result').innerHTML='Password do not match';
+        //     document.getElementById('result').style.color="red";
+        //   }else{
+        //     document.getElementById('result').innerHTML='Registration Successful';
+        //     document.getElementById('result').style.color="green";
+        //   }
+        }
+      
+        
+        // time of the day in javascript
+
+        var hour = 18.01;
+
+   if (hour >= 0.00 && hour < 12.00) 
+    document.write('Good morning');
+   else if (hour >= 12.00 && hour < 18.00) 
+    document.write('Good afternoon');
+   else 
+    document.write('Good evening');
+
+    </script>
+   
+ </body>
+ </html>

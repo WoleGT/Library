@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+
+ <style>
+    button {
+        margin-top: 0.5rem;
+        padding: 10px 10px 10px 10px;
+        background: green;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        transition: all linear 0.5s;
+        cursor: pointer;
+    }
+
+    button:hover {
+        transform:translate(5px, -5px);
+       
+    }
+</style>
+ <body>
+
+ <h1 style="color: crimson">Login Here</h1>
+ <form>
+    <p>
+        <lable>Username</lable>
+        <input type="text" name="user_name" id="user_name">
+    </p>
+    <p>
+        <lable>Password</lable>
+        <input type="password" name="password" id="password">
+        <button type="button" onclick="showPassword()">Password</button>
+    </p>
+ </form>
+
+ <!-- <div style="background-color: skyblue; color: white;"> -->
+    <button type="button" onclick="changeTheme()" style="background-color: blue;">Settings One</button>
+    <button type="button" onclick="changeThemes()" style="background-color: green;">Settings Two</button>
+    <div id="colorBlue">
+       <h3>Online Publication</h3>
+       <p>A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or <br> natural resources</p>
+       <h3>Another Heading</h3>
+       <p>A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or <br> natural resources</p>
+    </div>
+<!-- </div> -->
+<!-- <div style="background-color: greenyellow; color: white;">
+    <button type="button" onclick="changeThemee()" style="background-color: blue;">Settings One</button>
+    <button type="button" onclick="changeThemess()" style="background-color: green;">Settings Two</button>
+    <div id="colorGreen">
+       <h3>Online Publication</h3>
+       <p>A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or <br> natural resources</p>
+       <h3>Another Heading</h3>
+       <p>A Royalty is an owner for the ongoing use of their asset or property such as patents, copyrighted works, franchises or <br> natural resources</p>
+    </div>
+</div> -->
+
+
+ <!-- <p class="Wole">Hello World</p>
+ <p class="Wole">Hello World</p>
+ <p class="Wole">Hello World</p>
+ <p class="Wole">Hello World</p>
+ <p class="Wole">Hello World</p> -->
+ <body>
+   
+<script type="text/javascript">
+
+function showPassword(){
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    document.getElementById("btns").innerHTML = 'Show Password'  
+    x.type = "text";  
+  } else {
+    document.getElementById("btns").innerHTML = 'Hide Password'
+    x.type = "password";
+  }
+}
+  
+
+function changeTheme(){
+    var colorBlue = document.getElementById("colorBlue");
+    colorBlue.style.backgroundColor = "blue";
+    colorBlue.style.color = "white";
+}
+function changeThemes(){
+    var colorGreen = document.getElementById("colorBlue");
+    colorBlue.style.backgroundColor = "green";
+    colorBlue.style.color = "white";
+    
+}
+   
+
+//   var newText = document.getElementsByClassName('Wole').innerHTML ='Welcome World';
+ 
+    </script>
+
+ </body>
+ </html>

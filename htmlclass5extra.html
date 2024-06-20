@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="submit.html" method="GET"> //"POST" used for confidential information
+      <div>
+        <label for="Firstname">Firstname</label>
+        <br>
+        <input type="text" name="Firstname" id="Firstname" required>
+      </div>
+      <br>
+      <div>
+        <label>Lastname</label>
+        <br>
+        <input type="text" required> //if you put name"Firstname" back end will see. you must write excatly so u can communicate with Back End Developer
+      </div>
+      <br>
+      <div>
+        <label>Age</label>
+        <br>
+        <input type="number" required>
+      </div>
+      <br>
+      <div>
+        <label>Email</label>
+        <br>
+        <input type="email" name="email" placeholder="e.g wole@yahoo.com">
+      </div>
+      <br>
+      <br>
+      <div>
+        <label>Select your favourite colour</label>
+        <br>
+        <input type="color" name="color">
+      </div>
+      <br>
+      <div>
+        <label>State of Origin</label>
+        <br>
+          <select>
+            <option value="Ogun">Ogun</option>
+            <option value="Ogun">Ogun</option>
+            <option value="Ogun">Ogun</option>
+          </select>   
+      </div>
+      <br>
+      <div>
+        <label>Choose your date of birth</label>
+        <br>
+        <input type="date" name="date" required>
+      </div>
+      <br>
+      <div>
+        <label>Password</label>
+        <br>
+        <input type="password" name="password" required>
+      </div>
+      <br>
+      <div>
+        <label>Sex</label>
+        <br>
+        <input type="radio" name="Gender" Value="Male">Male
+        <input type="radio" name="Gender" Value="Female">Female
+      </div>
+      <br>
+      <div>
+        <label>Hobbies</label>
+        <br>
+        <input type="checkbox" name="Hobbies" Value="Sleeping">Sleeping
+        <input type="checkbox" name="Hobbies" Value="Driving">Driving
+        <input type="checkbox" name="Hobbies" Value="Reading">Reading
+        <input type="checkbox" name="Hobbies" Value="Gisting">Gisting
+      </div>
+      <br>
+      <button type="submit">REGISTER</button>
+
+
+      
+
+    </form>
+  </body>
+  </html>

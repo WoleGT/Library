@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+
+   <div style="border: 1px red solid; width:500px; height:100px; padding: 20px;">
+    <h2> AbokiFX Currency Converter</h2>     
+    <form>   
+        <label>Enter a Value in USD</label>
+        <input type="text" name="value" id="value"  placeholder="Enter a value in USD">
+        <button type="button" onclick="convertToNaira()" style="background-color: red; color: white; border-radius: 5px; border-color: red;">Convert to Naira</button>
+    </form>
+   </div>
+    
+ <!-- JS codes -->
+ <script type="text/javascript">
+    function convertToNaira()
+    {
+       var naira = 536;
+       var usdValue = document.getElementById('value').value;
+       var usdAmount = parseFloat(usdValue);
+       var conversion = naira * usdAmount
+       alert('$' + usdAmount + ' is ' + conversion + ' naira ');
+
+    }
+
+ </script>
+
+ </body>
+ </html>

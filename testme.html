@@ -10,10 +10,10 @@
     div{
         border: 1px solid gainsboro;
     }
-    .logo {
+    /* .logo {
             width: 70px;
             height: 70px;
-            border: 2px solid green;
+            border: 1px solid green;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -21,7 +21,7 @@
             font-size: 36px;
             color: green;
             font-family: Arial, sans-serif;
-        }
+        } */
 
 
     
@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col"><img src="./image/blueshirts.jpg" height="40px" width="20%"></div>
                 <div class="col"><input type="number" value="0" id="figure1" onchange="getValue()"></div>
-                <div class="col"><input type="text" id="figure2" value="3500"></div>
+                <div class="col"><input type="text" id="figure2" value="5500"></div>
                 <div class="col"><input type="text" id="total1"></div>
             </div>
 
@@ -54,7 +54,7 @@
             <div class="row">
                 <div class="col"><img src="./image/image2/blackshirt.webp" height="40px" width="20%"></div>
                 <div class="col"><input type="number" value="0"  id="figure3" onchange="getValuea()"></div>
-                <div class="col"><input type="text" id="figure4" value="3000"></div>
+                <div class="col"><input type="text" id="figure4" value="4000"></div>
                 <div class="col"><input type="text" id="total2"></div>
             </div>
 
@@ -129,7 +129,7 @@ function getTotal()
     alert(d);
     alert (e);
     if (d >= 20000 || e >= 10){
-        document.getElementById('promoResult').innerHTML= 'Congrats you are qualified for our Valentine Day Promo. you are purchasing 5 items. the total amount being spent is 20000 naira an average of 4000 naira'; 
+        document.getElementById('promoResult').innerHTML= 'Congrats you are qualified for our Valentine Day Promo. Because purchased items total amount is in excess of 20000 naira'; 
         document.getElementById('congratulations').css.display='block'
         
         

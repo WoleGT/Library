@@ -8,24 +8,41 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
  </head>
 <style>
-   div{
-      min-height: 50px;
-      border: 1px gainsboro solid;
+   body
+   {
+      border-style:none none solid none;
+      border-color:white white black white;
+   }   
+   div
+   {
+      border-style:solid none none none;
+      border-color: whitesmoke;
+   }   
+   button
+   {
+      border-radius: 5px;   
+   }
+   #Logo
+   {
+      visibility: hidden;
+   }
+   #Logo2
+   {
+      visibility: hidden;
    }
 </style>
  <body class="container">
-   <h1>APEX STORE</h1>
+   <h3 style="padding-top: 10px;">APEX STORE</h3>
 
    <p>This store is currently running a promo for online shoppers. There will be a Christmas prize draw <strong>for customers who purchase goods worth up to N20,000 or up to 10 items 
    in one transaction</strong>. The interface below has been designed for customers to enter the prize draw.</p>
    <p>Using javaScript, based on the contents of the  shopping cart determine if the user is qualified for the draw or</p>
 
-   <h2>Your Shopping Bag......</h2>
+   <h4>Your Shopping Bag......</h4>
 
-   
    <div class="container">
       <form>
-         <!-- item heading starts here -->
+         <!-- items heading starts here -->
          <div class="row">
              <div class="col-md-3" style="font-weight: bolder;">Items</div>
              <div class="col-md-3" style="font-weight: bolder;">Quantity</div>
@@ -36,138 +53,129 @@
         <!-- item1 div starts here -->
         <div class="row">
             <div class="col-md-3">
-                <img src="./image/image2/blackshirt.webp" height="100px">
+                <img src="./image/image2/blackshirt.webp" height="80px">
             </div>
             <div class="col-md-3">
-             <input type="number" value="0"  id="quantity" onchange="getValue()" style="width: 240px;">
+             <input type="number" value="0"  id="quantity" onchange="getValue1()" style="width: 240px; margin-top: 30px;">
            </div>
            <div class="col-md-3">
-            <input type="text" name="price" value="5500" id="price" style="width: 240px;">
+            <input type="text" name="price" value="5500" id="price" style="width: 200px; margin-top: 30px;">
            </div>
            <div class="col-md-3">
-            <p id="total1">Value</p>
+            <input type="text" id="total1"  style="width: 200px; margin-top: 30px; border: none;">
            </div>
       </div>
 
       <!-- item2 div starts here -->
       <div class="row">
          <div class="col-md-3">
-            <img src="./image/blueshirts.jpg" height="100px">
+            <img src="./image/blueshirts.jpg" height="80px">
          </div>
          <div class="col-md-3">
-           <input type="number"  value="0" id="quantity2" onchange="getValue2()" style="width: 240px;">
+           <input type="number"  value="0" id="quantity2" onchange="getValue2()" style="width: 240px; margin-top: 30px;">
          </div>
          <div class="col-md-3">
-            <input type="text" name="price" value="4000" id="price2" style="width: 240px;">
+            <input type="text" name="price" value="4000" id="price2" style="width: 200px; margin-top: 30px;">
          </div>
          <div class="col-md-3">
-            <p id="total2">Value</p>
+            <input type="text" id="total2" style="width: 200px; margin-top: 30px; border: none;">
          </div>
       </div>
 
       <!-- item3 div starts here -->
       <div class="row">
          <div class="col-md-3">
-            <img src="./image/image2/blackshirtss.jpg" height="100px">
+            <img src="./image/image2/blackshirtss.jpg" height="80px">
          </div>
          <div class="col-md-3">
-            <input type="number"  value="0" id="quantity3" onchange="getValue3()" style="width: 240px;">
+            <input type="number"  value="0" id="quantity3" onchange="getValue3()" style="width: 240px; margin-top: 30px;">
          </div>
          <div class="col-md-3">
-            <input type="text" name="price" value="1000" id="price3" style="width: 240px;">
+            <input type="text" name="price" value="1000" id="price3" style="width: 200px; margin-top: 30px;">
          </div>
          <div class="col-md-3">
-            <p id="total3">Value</p>
+            <input type="text" id="total3" style="width: 200px; margin-top: 30px; border: none;">
          </div>
       </div>
       </form>
    </div>
    
-  <!-- button starts here -->
-  <button type="button" onclick="getTotal()" style="background-color: red; color: aqua; width: 1120px;">Enter Prize Draw</button>
+  <!-- button -->
+  <button type="button" onclick="getTotal()" style="background-color: brown; color: white; width: 1120px;">Enter Prize Draw</button>
+  
+  <!-- valentine's day promo result and logo starts here -->
+  <div class="row">
+     <div class="col-md-2">
+      <i id="Logo"><img src="./image/qualified.jpg"  width="75" height="75px"  alt="notqualified_logo"></i>
+      <i id="Logo2"><img src="./image/try again.jpg"  width="75px" height="75px" alt="notqualified_logo"></i>
+   </div>
+     <div class="col-md-10" id="promoResult"></div> 
+  </div>
 
-  <p id="promoResult"></p>
-
-
-<!-- javaScript starts here -->
-
+<!-- javaScript codes starts here -->
 <script type="text/javaScript">
-//Three (3) Value functions code
-   function getValue()
+
+//Three (3) Value function for each item currently on display at Apex Store
+   function getValue1()
    {
     var quantity = document.getElementById('quantity').value;
     var price = document.getElementById('price').value;
-   
     var value1 = quantity * price
-
-    document.getElementById('total1').innerHTML = value1;
+    document.getElementById('total1').value = value1;
    }
-
 
    function getValue2()
    {
     var quantity = document.getElementById('quantity2').value;
     var price = document.getElementById('price2').value;
-   
     var value2 = quantity * price
-
-    document.getElementById('total2').innerHTML = value2;
+    document.getElementById('total2').value = value2;
    }
-
 
    function getValue3()
    {
     var quantity = document.getElementById('quantity3').value;
     var price = document.getElementById('price3').value;
-   
     var value3 = quantity * price
-
-    document.getElementById('total3').innerHTML = value3;  
+    document.getElementById('total3').value = value3;  
    }
 
-  
-  
-  
-  
+   // This function get total item and amount purchased and output promo result
    function getTotal()
-{
-    var d = priceTotal();
+   {
+    var d = amountTotal();
     var e = quantityTotal();
     alert(d);
     alert (e);
     if (d >= 20000 || e >= 10){
-        document.getElementById('promoResult').innerHTML= 'Congrats you are qualified for our Valentine Day Promo. you are purchasing 5 items. the total amount being spent is 20000 naira an average of 4000 naira'; 
-        document.getElementById('promoResult').style.backgroundColor='green';
-        document.getElementById('promoResult').style.color='white';
-        
-    }else if (d < 20000 && e < 10)
+        document.getElementById('promoResult').innerHTML= 'Congratulations you are qualified for our Valentines day Promo!.The total amount being spent is 20000naira and above.';     
+        document.getElementById('Logo').style.visibility="visible"
+      }else if (d < 20000 && e < 10)
     {
-        document.getElementById('promoResult').innerHTML= 'Shop more'; 
-        document.getElementById('promoResult').style.backgroundColor='red';
-        document.getElementById('promoResult').style.color='white';
-    }else{
-        document.getElementById('promoResult').innerHTML= 'Invalid entry';
-        document.getElementById('promoResult').style.backgroundColor='red';
-        document.getElementById('promoResult').style.color='white';
+        document.getElementById('promoResult').innerHTML= 'Thank you for shopping with us, your purchased items is less than 10 and total amount spent is less that 20000naira. shop more to qualify for our Valentines day Promo.';    
+        document.getElementById('Logo2').style.visibility="visible"
+      }else{
+        document.getElementById('promoResult').innerHTML= 'Invalid entry';     
     }    
-}
+   }
  
-
-    function priceTotal()
+   // This function gets total amount purchased and returns into getTotal function
+    function amountTotal()
     {
-    var a = parseInt( document.getElementById('total1').value);
-    var b = parseInt( document.getElementById('total2').value);
-    var c = parseInt( document.getElementById('total3').value);
+    var a = parseInt(document.getElementById('total1').value);
+    var b = parseInt(document.getElementById('total2').value);
+    var c = parseInt(document.getElementById('total3').value);
     
     var d = a + b + c;
     return d  
    }
 
+   // This function gets total number of items purchased and return into getTotal function
    function quantityTotal()
-    {
-    var x = parseInt( document.getElementById('quantity').value);
-    var y = parseInt( document.getElementById('quantity2').value);
-    var z = parseInt( document.getElementById('quantity3').value);
+   {
+    var x = parseInt(document.getElementById('quantity').value);
+    var y = parseInt(document.getElementById('quantity2').value);
+    var z = parseInt(document.getElementById('quantity3').value);
     
     var e = x + y + z;
     return e  
@@ -175,53 +183,7 @@
 
 
 
-   //total caculation + no items calculation and Promo result codes
-
-//    function getTotal()
-// {
-//     var d = priceTotal();
-//     var e = quantityTotal();
-//     alert(d);
-//     alert(e);
-
-//     if (d >= 20000 || e > 10){
-//      document.getElementById('promoResult').innerHTML= 'Congrats';  
-//     }else if (d < 20000 && e < 10)
-//     {
-//      document.getElementById('promoResult').innerHTML= 'Shop more';   
-//     }else{
-//       document.getElementById('promoResult').innerHTML= 'Invalid Entry'; 
-//     }
-// }
- 
-//     function priceTotal()
-//     {
-//     var a = parseInt(document.getElementById('total').value);
-//     var b = parseInt(document.getElementById('total2').value);
-//     var c = parseInt(document.getElementById('total3').value);
-    
-//     var d = a + b + c;
-//     return d  
-//    }
-
-//    function quantityTotal()
-//     {
-//     var x = parseInt(document.getElementById('quantity').value);
-//     var y = parseInt(document.getElementById('quantity2').value);
-//     var z = parseInt(document.getElementById('quantity3').value);
-    
-//     var e = x + y + z;
-//     return e 
-//    }
-  
-   
-   
-
-
 </script>
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </body>
  </html>

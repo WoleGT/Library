@@ -56,7 +56,31 @@
                 <img src="./image/image2/blackshirt.webp" height="80px">
             </div>
             <div class="col-md-3">
-             <input type="number" value="0"  id="quantity" onchange="getValue1()" style="width: 240px; margin-top: 30px;">
+             <!-- <input type="number" value="0"  id="quantity" onchange="getValue1()" style="width: 240px; margin-top: 30px;"> -->
+             <lable></lable>
+            <select id="quantity" name="quantity2" onchange="getValue1()" style="width: 240px; margin-top: 30px;">
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+            </select>
            </div>
            <div class="col-md-3">
             <input type="text" name="price" value="5500" id="price" style="width: 200px; margin-top: 30px;">
@@ -72,7 +96,31 @@
             <img src="./image/blueshirts.jpg" height="80px">
          </div>
          <div class="col-md-3">
-           <input type="number"  value="0" id="quantity2" onchange="getValue2()" style="width: 240px; margin-top: 30px;">
+              <!-- <input type="number" value="0" id="quantity2" onchange="getValue2()" style="width: 240px; margin-top: 30px;"> -->
+            <lable></lable>
+            <select id="quantity2" name="quantity2" onchange="getValue2()" style="width: 240px; margin-top: 30px;">
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+            </select>
          </div>
          <div class="col-md-3">
             <input type="text" name="price" value="4000" id="price2" style="width: 200px; margin-top: 30px;">
@@ -88,10 +136,34 @@
             <img src="./image/image2/blackshirtss.jpg" height="80px">
          </div>
          <div class="col-md-3">
-            <input type="number"  value="0" id="quantity3" onchange="getValue3()" style="width: 240px; margin-top: 30px;">
+            <!-- <input type="number"  value="0" id="quantity3" onchange="getValue3()" style="width: 240px; margin-top: 30px;"> -->
+            <lable></lable>
+            <select id="quantity3" name="quantity3" onchange="getValue3()" style="width: 240px; margin-top: 30px;">
+               <option value="0">0</option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+               <option value="16">16</option>
+               <option value="17">17</option>
+               <option value="18">18</option>
+               <option value="19">19</option>
+               <option value="20">20</option>
+            </select>
          </div>
          <div class="col-md-3">
-            <input type="text" name="price" value="1000" id="price3" style="width: 200px; margin-top: 30px;">
+            <input type="text" name="price" value="1000" id="price3" style="width: 200px; margin-top: 30px;">   
          </div>
          <div class="col-md-3">
             <input type="text" id="total3" style="width: 200px; margin-top: 30px; border: none;">
@@ -100,16 +172,23 @@
       </form>
    </div>
    
+  
+   
   <!-- button -->
   <button type="button" onclick="getTotal()" style="background-color: brown; color: white; width: 1120px;">Enter Prize Draw</button>
   
   <!-- valentine's day promo result and logo starts here -->
   <div class="row">
      <div class="col-md-2">
-      <i id="Logo"><img src="./image/qualified.jpg"  width="75" height="75px"  alt="notqualified_logo"></i>
-      <i id="Logo2"><img src="./image/try again.jpg"  width="75px" height="75px" alt="notqualified_logo"></i>
-   </div>
-     <div class="col-md-10" id="promoResult"></div> 
+        <i id="Logo"><img src="./image/qualified.jpg"  width="75" height="75px"  alt="notqualified_logo"></i>
+        <i id="Logo2"><img src="./image/try again.jpg"  width="75px" height="75px" alt="notqualified_logo"></i>
+     </div>
+     <div class="col-md-10">
+        <a id="promoResult"></a>
+        <a id="items_total"></a>
+        <a id="amount_total"></a> 
+        <a id="average"></a> 
+     </div>
   </div>
 
 <!-- javaScript codes starts here -->
@@ -145,14 +224,17 @@
    {
     var d = amountTotal();
     var e = quantityTotal();
-    alert(d);
-    alert (e);
+    var p = averagePurchase();
+    document.getElementById('amount_total').innerHTML= '<strong>Total amount spent:  </strong>' + d;
+    document.getElementById('items_total').innerHTML= '<strong>Total number of items purchased: </strong>' + e;
+    document.getElementById('average').innerHTML= '<strong> while average spent is:  </strong>' + p;
+   
     if (d >= 20000 || e >= 10){
-        document.getElementById('promoResult').innerHTML= 'Congratulations you are qualified for our Valentines day Promo!.The total amount being spent is 20000naira and above.';     
+        document.getElementById('promoResult').innerHTML= 'Congratulations you are qualified for our Valentines day Promo!.';     
         document.getElementById('Logo').style.visibility="visible"
       }else if (d < 20000 && e < 10)
     {
-        document.getElementById('promoResult').innerHTML= 'Thank you for shopping with us, your purchased items is less than 10 and total amount spent is less that 20000naira. shop more to qualify for our Valentines day Promo.';    
+        document.getElementById('promoResult').innerHTML= 'Thank you for shopping with us, you are not qualified for our Valentines day Promo at this time, please shop more.';    
         document.getElementById('Logo2').style.visibility="visible"
       }else{
         document.getElementById('promoResult').innerHTML= 'Invalid entry';     
@@ -178,7 +260,25 @@
     var z = parseInt(document.getElementById('quantity3').value);
     
     var e = x + y + z;
-    return e  
+    return e
+   }
+   function averagePurchase()
+   {
+    var a = parseInt(document.getElementById('total1').value);
+    var b = parseInt(document.getElementById('total2').value);
+    var c = parseInt(document.getElementById('total3').value);
+    var d = a + b + c;   
+    
+    var x = parseInt(document.getElementById('quantity').value);
+    var y = parseInt(document.getElementById('quantity2').value);
+    var z = parseInt(document.getElementById('quantity3').value); 
+    var e = x + y + z;
+
+    var k = parseFloat(d);
+    var j = parseFloat(e);
+    var p = k/j;
+
+     return p
    }
 
 

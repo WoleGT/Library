@@ -223,11 +223,11 @@
    function getTotal()
    {
     var d = amountTotal();
-    var e = quantityTotal();
-    var p = averagePurchase();
-    document.getElementById('amount_total').innerHTML= '<strong>Total amount spent:  </strong>' + d;
-    document.getElementById('items_total').innerHTML= '<strong>Total number of items purchased: </strong>' + e;
-    document.getElementById('average').innerHTML= '<strong> while average spent is:  </strong>' + p;
+    var h = quantityTotal();
+    var k = averagePurchase();
+    document.getElementById('amount_total').innerHTML= '<strong>Total amount spent in Naira:  </strong>' + d;
+    document.getElementById('items_total').innerHTML= '<strong>Total number of items purchased: </strong>' + h;
+    document.getElementById('average').innerHTML= '<strong> while average spent is:  </strong>' + k;
    
     if (d >= 20000 || e >= 10){
         document.getElementById('promoResult').innerHTML= 'Congratulations you are qualified for our Valentines day Promo!.';     
@@ -252,7 +252,7 @@
     return d  
    }
 
-   // This function gets total number of items purchased and return into getTotal function
+   // This function gets average of number of items purchased and return result into getTotal function
    function quantityTotal()
    {
     var x = parseInt(document.getElementById('quantity').value);
@@ -262,6 +262,8 @@
     var e = x + y + z;
     return e
    }
+
+   // this functions finds average amount spent and return result to getTotal function
    function averagePurchase()
    {
     var a = parseInt(document.getElementById('total1').value);
@@ -269,16 +271,16 @@
     var c = parseInt(document.getElementById('total3').value);
     var d = a + b + c;   
     
-    var x = parseInt(document.getElementById('quantity').value);
-    var y = parseInt(document.getElementById('quantity2').value);
-    var z = parseInt(document.getElementById('quantity3').value); 
-    var e = x + y + z;
+    var e = parseInt(document.getElementById('quantity').value);
+    var f = parseInt(document.getElementById('quantity2').value);
+    var g = parseInt(document.getElementById('quantity3').value); 
+    var h = e + f + g;
 
-    var k = parseFloat(d);
-    var j = parseFloat(e);
-    var p = k/j;
+    var i = parseFloat(d);
+    var j = parseFloat(h);
+    var k = i/j;
 
-     return p
+     return k
    }
 
 

@@ -20,12 +20,12 @@
   </form>
      -->
 <br>
-<!-- <form>
+<form>
 <input type="text" placeholder="Full Name" id="user_name" name="userName">
 <input type="text" placeholder="Email Address" id="email" name="emailAddress">
 <input type="checkbox" id="terms" name="terms_agreement">Agree to the Terms and Conditions
 </form>
-  <button type="button" id="btnss">Send Confirmation</button> -->
+  <button type="button" id="btnss" style="background-color: gold; border: none;">Send Confirmation</button>
 
   <!-- <input type="radio" name="gender" value="male" checked>male
   <input type="radio" name="gender" value="female">female
@@ -39,7 +39,7 @@
    -->
 
 
-   <input type="text" placeholder="Full Name" id="full_name">
+   <!-- <input type="text" placeholder="Full Name" id="full_name">
    <input type="text" placeholder="Email Address" id="email_address">
    <input type="checkbox" name="terms_agreement" value="yes" id="terms">I agree to be a good person
    <button type="button" id="btns">Submit</button>
@@ -57,8 +57,7 @@
    <br>
    <input type="checkbox" name="hobbies" value="linkedin">Linkedin
    <br>
-   <input type="checkbox" name="hobbies" value="others">Others
-
+   <input type="checkbox" name="hobbies" value="others">Others -->
 
 
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -67,28 +66,13 @@
 // $(function() {
 //     $('#terms').click(function() {
 //         if ($(this).is(':checked')) {
-//             $('#btns').attr('disabled', 'true');
+//             $('#btnss').attr('disabled', 'true');
 //         } else {
-//             $('#btns').removeAttr('disabled','false');
+//             $('#btnss').removeAttr('disabled','false');
 //         }
 //     });
 // });
  
-//  $(document).ready(function(){
-//   $('#terms').change(function(){
-//   //  var terms_agreement = $('#terms').prop('checked');
-//   //  console.log(terms_agreement)
-
-//    if ($('#terms').is(':checked')=== true){
-//     $('#btns').prop('disabled', false);
-//     // document.write('kindly check the terms and agreement box')
-//    }else{
-//     $('#btns').prop('disabled', true);
-//     // console.log('link sent to your Email')
-//    }
-//   });
-//  });
-
 
 //  $(document).ready(function(){
 //    $('#btns').click(function(){
@@ -105,23 +89,23 @@
 
 
 
-    // $(document).ready(function(){
-    //   $('#btnss').click(function(){
-    //     var FullName = $('#user_name').val();
-    //     var EmailAddress = $('#email').val();
-    //     var terms_agreement = $('#terms').prop('checked');
-    //     alert(terms_agreement);
+    $(document).ready(function(){
+      $('#terms').change(function(){
+        var FullName = $('#user_name').val();
+        var EmailAddress = $('#email').val();
+        // var terms_agreement = $('#terms').prop('checked');
+        // alert(terms_agreement)
       
-    //     if (terms_agreement == false)
-    //     {
-    //       alert('please check the Terms and Agreement box');
-    //     }else
-    //     {
-    //      alert ('Link sent to your email');
-    //     }
+        if ($('#terms').is(':checked') === true)
+        {
+          $('#btnss').prop('disabled',false);
+        }else
+        {
+          $('#btnss').prop('disabled',true);
+        }
 
-    //   });
-    // });
+      });
+    });
 
     // $(document).ready(function(){
     //   $('#btnss').click(function(){
@@ -130,27 +114,6 @@
     // });
 
    
-
-
-//   $(document).ready(function(){
-//     $('#btns').click(function(){
-
-//     var password = $('password').attr("type");
-
-//   if (password == "password"){
-//     $('#password').attr("type", "text");
-//     $('#btns').text("Hide Password");
-//   }else{
-//     $('#password').attr("type", "password");
-//     $('#btns').text("Show Password");
-//   }
-
-//   });
-// });
-
-
-
-
 
  </script>
  </body>
